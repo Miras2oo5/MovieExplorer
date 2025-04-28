@@ -69,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+    @Override
+    protected void onDestroy() {
+        SharedPrefManager.getInstance(this).logout();
+        super.onDestroy();
+    }
 
     private void loadPopularMovies() {
         progressBar.setVisibility(View.VISIBLE);
