@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import java.util.ArrayList;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,7 +18,7 @@ import com.example.movieexplorer.adapters.MovieAdapter;
 import com.example.movieexplorer.api.ApiClient;
 import com.example.movieexplorer.api.ApiInterface;
 import com.example.movieexplorer.model.Movie;
-import com.example.movieexplorer.models.MovieResponse;
+import com.example.movieexplorer.model.MovieResponse;
 import com.example.movieexplorer.utils.SharedPrefManager;
 
 import java.util.List;
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<MovieResponse> call = apiService.getPopularMovies("ВАШ_API_КЛЮЧ", 1);
+        Call<MovieResponse> call = apiService.getPopularMovies("854c5f73dfc2671b1dea661201afacac", 1);
 
         call.enqueue(new Callback<MovieResponse>() {
             @Override

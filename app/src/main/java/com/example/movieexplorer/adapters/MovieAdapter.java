@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.movieexplorer.R;
-import com.example.movieexplorer.models.Movie;
+import com.example.movieexplorer.model.Movie;
 
 import java.util.List;
 import java.util.Locale;
