@@ -40,7 +40,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Зарегистрироваться"/>
+        android:text="Зарегистрироваться"
+        android:background="@color/login_button_color"
+        />
 
     <TextView
         android:id="@+id/textViewLogin"
